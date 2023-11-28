@@ -1,9 +1,11 @@
-package com.walker.service;
+package com.walker.service.employeeServices;
 
 import com.walker.model.Employee;
 import com.walker.model.EmployeeDto;
-import com.walker.model.EmployeeRepository;
+import com.walker.repository.EmployeeRepository;
 import com.walker.service.EmployeeMapper.EmployeeMapper;
+import com.walker.service.ResourceNotFoundException;
+import com.walker.service.employeeServices.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,13 +13,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeRepository employeeRepository;
 
-        @Autowired
+    @Autowired
     public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
+
     @Override
     public List<EmployeeDto> getAllEmployees() {
         List<Employee> employees  =  employeeRepository.findAll();

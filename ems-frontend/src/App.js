@@ -1,6 +1,5 @@
 import './App.css';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import ListEmployeeComponent from './components/ListEmployeeComponent';
 import EmployeeComponent from './components/EmployeeComponent';
@@ -18,7 +17,6 @@ function App() {
                         <Route path = "/edit-employee/:id" element = { <EmployeeComponent />}></Route>
                     </Routes>
                 </div>
-                <FooterComponent />
             </BrowserRouter>
         </div>
     );

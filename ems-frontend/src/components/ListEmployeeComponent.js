@@ -53,7 +53,6 @@ const ListEmployeeComponent = () => {
                     <th> Employee First Name </th>
                     <th> Employee Last Name </th>
                     <th> Employee Email Id </th>
-                    <th> Department Name</th>
                     <th> Actions </th>
                 </tr>
                 </thead>
@@ -66,7 +65,7 @@ const ListEmployeeComponent = () => {
                                 <td> {employee.firstName} </td>
                                 <td>{employee.lastName}</td>
                                 <td>{employee.email}</td>
-                                <td>{employee.departmentDto ? employee.departmentDto.departmentName : 'N/A'}</td>                                <td>
+                                <td>
                                     <button className="btn btn-info" onClick={() => updateEmployee(employee.id)} >Update</button>
                                     <button className = "btn btn-danger" onClick = {() => removeEmployee(employee.id)}
                                             style = {{marginLeft:"10px"}}> Delete</button>

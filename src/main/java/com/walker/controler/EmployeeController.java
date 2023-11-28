@@ -2,7 +2,7 @@ package com.walker.controler;
 
 
 import com.walker.model.EmployeeDto;
-import com.walker.service.EmployeeService;
+import com.walker.service.employeeServices.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
